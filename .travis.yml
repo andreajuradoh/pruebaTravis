@@ -4,6 +4,6 @@ php:
 dist:
 - xenial
 script:
-- phpunit pruebaPhp.php
+-  pruebaPhp.php
 email:
 - avjh_18@hotmail.com
