@@ -1,9 +1,9 @@
 language: php
 php:
-- "5.5"
+- 5.5
 dist:
 - xenial
 script:
--  pruebaPhp.php
+- phpunit  pruebaPhp.php
 email:
 - avjh_18@hotmail.com
