@@ -1,17 +1,15 @@
 <?php
-class RemoteConnect
+require 'Calculator.php';
+class CalculatorTests extends PHPUnit_Framework_TestCase
 {
-  public function connectToServer($serverName=null)
-  {
-    if($serverName==null){
-      throw new Exception("¡Este no es un nombre de servidor!");
-    }
-    $fp = fsockopen($serverName,80);
-    return ($fp) ? true : false;
-  }
-  public function returnSampleObject()
-  {
-    return $this;
-  }
+private $calculator;
+protected function setUp()
+{
+$this->calculator= new Calculator();
 }
-?>
+public function testAdd()
+{
+$result=$this->calculator->add(1,2);
+$this->assertEquals(3,$result);
+}
+}
